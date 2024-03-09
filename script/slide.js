@@ -1,3 +1,4 @@
+"use strict";
 if (window.innerWidth <= 768) {
   let gallery = document.querySelector(".picture-section__wrapper");
   let images = document.querySelectorAll(".picture-section__image");
