@@ -20,27 +20,28 @@
             </div>
         </div>
     </header>
-    <div class="menu" id="menu">
+        <div class="menu" id="menu">
 
-        <div class="menu__top">
-            <a href="#home"><img src="./images/logo-menu.png" alt="Electrical services" class="menu__logo"></a>
-            <a href="#home"><img src="./images/close.png" alt="Close" class="close"></a>
+            <div class="menu__top">
+                <a href="#home"><img src="./images/logo-menu.png" alt="Electrical services" class="menu__logo"></a>
+                <a href="#home"><img src="./images/close.png" alt="Close" class="close"></a>
+            </div>
+            <ul class="menu__nav">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#project">OUR PROJECT</a></li>
+                <li><a href="#tariff">PRICES AND SERVICES</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACTS</a></li>
+            </ul>
+            <ul class="footer__socials">
+                <li class="footer__socials-item"><img src="./images/instagram.png" alt="Instagram"></li>
+                <li class="footer__socials-item"><img src="./images/facebook.png" alt="Facebook"></li>
+                <li class="footer__socials-item"><img src="./images/youtube.png" alt="YouTube"></li>
+            </ul>
+
         </div>
-        <ul class="menu__nav">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#residential">ABOUT US</a></li>
-            <li><a href="gallery.html">OUR PROJECT</a></li>
-            <li><a href="#testimonials">PRICES AND SERVICES</a></li>
-            <li><a href="#questions">PORTFOLIO</a></li>
-            <li><a href="#contact-us">CONTACTS</a></li>
-        </ul>
-        <ul class="footer__socials">
-            <li class="footer__socials-item"><img src="./images/instagram.png" alt="Instagram"></li>
-            <li class="footer__socials-item"><img src="./images/facebook.png" alt="Facebook"></li>
-            <li class="footer__socials-item"><img src="./images/youtube.png" alt="YouTube"></li>
-        </ul>
 
-    </div>
     <main>
         <section class="hero-section">
             <div class="hero-section__info">
@@ -89,9 +90,9 @@
                     <img src="./images/tariff-image.png" class="hero-section__tariff-info-text-img">
                 </li>
                 <li>
-                    <button class="hero-section__button" type="button">
-                        <h2>Choose the tariff</h2>
-                    </button>
+                    <a href="#tariff"> <button class="hero-section__button" type="button">
+                            <h2>Choose the tariff</h2>
+                        </button></a>
                 </li>
             </ul>
         </section>
@@ -113,7 +114,7 @@
                     </li>
             </div>
         </section>
-        <section class="about-us-section">
+        <section class="about-us-section" id="about">
             <div class="container">
                 <div class="about-us-section__wrapper">
                     <ul class="about-us-section__info">
@@ -141,7 +142,7 @@
         </section>
 
 
-        <section class="our-project-section">
+        <section class="our-project-section" id="project">
             <div class="container">
 
                 <div class="our-project-section__wrapper">
@@ -171,16 +172,16 @@
                         <p class="our-project-section__header">Your home<br>
                             is your place of power</p>
                         <div class="our-project-section__image-wrap">
-                            <a href="bnt-prev" class="our-project-section__btn-prev"></a>
-                            <img src="./images/bed.png" alt="bad" class="our-project-section__image">
-                            <a href="bnt-prev" class="our-project-section__btn-next"></a>
+                            <p class="our-project-section__btn-prev" id="btn-prev"></p>
+                            <img id="image" src="./images/bed.png" alt="bad" class="our-project-section__image">
+                            <p class="our-project-section__btn-next" id="btn-next"></p>
                         </div>
                     </div>
 
                 </div>
             </div>
         </section>
-        <section class="tariff-section">
+        <section class="tariff-section" id="tariff">
             <div class="container">
                 <ul class="tariff-section__title">
                     <li class="tariff-section__title-form">Tariff Visual</li>
@@ -258,7 +259,7 @@
                 </div>
             </div>
         </section>
-        <section class="picture-section">
+        <section class="picture-section" id="portfolio">
             <div class="container">
                 <div class="picture-section__wrapper">
                     <img src="./images/gallery1.png" class="picture-section__image" alt="gallery">
@@ -266,7 +267,7 @@
                 </div>
             </div>
         </section>
-        <section class=" contact-setion">
+        <section class="contact-setion" id="contact">
             <div class="container">
                 <div class="contact-section__wrapper">
                     <nav class="contact-section__contacts">
@@ -297,14 +298,14 @@
                 </div>
                 <nav class="footer__links">
                     <ul class="footer__links-item">
-                        <li>HOME</li>
-                        <li>ABOUT US</li>
-                        <li>OUR PROJECT</li>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT US</a></li>
+                        <li><a href="#project">OUR PROJECT</a></li>
                     </ul>
                     <ul class="footer__links-item">
-                        <li>PRICES AND SERVICES</li>
-                        <li>PORTFOLIO</li>
-                        <li>CONTACTS</li>
+                        <li><a href="#tariff">PRICES AND SERVICES</a></li>
+                        <li><a href="#portfolio">PORTFOLIO</a></li>
+                        <li><a href="#contact">CONTACTS</a></li>
                     </ul>
                     <ul class="footer__socials">
                         <li class="footer__socials-item"><img src="./images/instagram.png" alt="Instagram"></li>
