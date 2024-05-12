@@ -27,3 +27,52 @@ if (motionItems.length > 0) {
   }
   setTimeout(motionScroll, 300);
 }
+
+let img = 0;
+let btn = 0;
+let imgPath = "./images/bed.png";
+
+document.getElementById("btn-next").addEventListener("click", (event) => {
+  img++;
+
+  if (img == 0) {
+    imgPath = "./images/bed.png";
+  } else if (img == 1) {
+    imgPath = "./images/bed1.png";
+  } else if (img == 2) {
+    imgPath = "./images/bed2.png";
+  } else {
+    img = 0;
+    imgPath = "./images/bed.png";
+  }
+
+  document.querySelector("#image").style = "opacity: 0.4";
+  setTimeout(() => {
+    document.querySelector("#image").src = imgPath;
+  }, 300);
+  setTimeout(() => {
+    document.querySelector("#image").style = "opacity: 1";
+  }, 500);
+});
+
+document.getElementById("btn-prev").addEventListener("click", (event) => {
+  img--;
+
+  if (img == 0) {
+    imgPath = "./images/bed.png";
+  } else if (img == 1) {
+    imgPath = "./images/bed1.png";
+  } else if (img == 2) {
+    imgPath = "./images/bed2.png";
+  } else {
+    img = 2;
+    imgPath = "./images/bed2.png";
+  }
+  document.querySelector("#image").style = "opacity: 0.4";
+  setTimeout(() => {
+    document.querySelector("#image").src = imgPath;
+  }, 300);
+  setTimeout(() => {
+    document.querySelector("#image").style = "opacity: 1";
+  }, 500);
+});
