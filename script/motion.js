@@ -32,9 +32,33 @@ let img = 0;
 let btn = 0;
 let imgPath = "./images/bed.png";
 
-document.getElementById("btn-next").addEventListener("click", (event) => {
-  img++;
+let resColored = document.querySelectorAll(".our-project-section__circle");
+resColored[img].classList.add("fill");
 
+document.getElementById("btn-next").addEventListener("click", (event) => {
+  nextSlide();
+  change();
+  changeFill();
+});
+
+document.getElementById("btn-prev").addEventListener("click", (event) => {
+  prevSlide();
+  change();
+  changeFill();
+});
+
+change = () => {
+  document.querySelector("#image").style = "opacity: 0.6";
+  setTimeout(() => {
+    document.querySelector("#image").src = imgPath;
+  }, 100);
+  setTimeout(() => {
+    document.querySelector("#image").style = "opacity: 1";
+  }, 300);
+};
+
+nextSlide = () => {
+  img++;
   if (img == 0) {
     imgPath = "./images/bed.png";
   } else if (img == 1) {
@@ -45,19 +69,10 @@ document.getElementById("btn-next").addEventListener("click", (event) => {
     img = 0;
     imgPath = "./images/bed.png";
   }
+};
 
-  document.querySelector("#image").style = "opacity: 0.4";
-  setTimeout(() => {
-    document.querySelector("#image").src = imgPath;
-  }, 300);
-  setTimeout(() => {
-    document.querySelector("#image").style = "opacity: 1";
-  }, 500);
-});
-
-document.getElementById("btn-prev").addEventListener("click", (event) => {
+prevSlide = () => {
   img--;
-
   if (img == 0) {
     imgPath = "./images/bed.png";
   } else if (img == 1) {
@@ -68,11 +83,11 @@ document.getElementById("btn-prev").addEventListener("click", (event) => {
     img = 2;
     imgPath = "./images/bed2.png";
   }
-  document.querySelector("#image").style = "opacity: 0.4";
-  setTimeout(() => {
-    document.querySelector("#image").src = imgPath;
-  }, 300);
-  setTimeout(() => {
-    document.querySelector("#image").style = "opacity: 1";
-  }, 500);
-});
+};
+
+changeFill = () => {
+  resColored.forEach((element) => {
+    element.classList.remove("fill");
+  });
+  resColored[img].classList.add("fill");
+};
