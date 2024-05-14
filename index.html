@@ -13,7 +13,7 @@
         <div class="container">
             <div class="header__container">
                 <img src="./images/logo.svg" alt="Bento Studio Logo" class="header__logo">
-                <button class="header__button" type="button">Order a consultation</button>
+                <button class="header__button" type="button" id="button">Order a consultation</button>
                 <a href="#menu"> <svg class="header__menu">
                         <use href="./images/icons.svg#icon-menu"></use>
                     </svg></a>
@@ -21,7 +21,6 @@
         </div>
     </header>
     <div class="menu" id="menu">
-
         <div class="menu__top">
             <a href="#home"><img src="./images/logo-menu.png" alt="Electrical services" class="menu__logo"></a>
             <a href="#home"><img src="./images/close.png" alt="Close" class="close"></a>
@@ -39,9 +38,33 @@
             <li class="footer__socials-item"><img src="./images/facebook.png" alt="Facebook"></li>
             <li class="footer__socials-item"><img src="./images/youtube.png" alt="YouTube"></li>
         </ul>
-
     </div>
-
+    <div class="form hidden" id="formMenu">
+        <p class=" form__logo"><img src="./images/form-logo.png">
+            <img src="./images/close.png" alt="Close" class="form__close" id="closeMenu">
+        </p>
+        <div class="form-wrapper">
+            <form action="#" id="contact-form" class="contact-form" name="contact-form" autocomplete="off">
+                <div class="form-inputs">
+                    <div class="form-input">
+                        <input type="text" name="user-name" id="user-name" placeholder="Your name" class="_req" />
+                    </div>
+                    <div class="form-input ">
+                        <input type="tel" name="user-tel" id="user-tel" placeholder="Your phone" class="tel _req" />
+                    </div>
+                    <div class="form-input">
+                        <input type="text" name="user-addres" id="user-addres" placeholder="Email (optional)" />
+                    </div>
+                    <div class="form-message">
+                        <textarea name="user-message" id="user-message" class="form-message _req"
+                            placeholder="Type your text here"></textarea>
+                    </div>
+                    <button class="form-button" type="submit" value="submit">Book
+                        Estimate</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <main>
         <section class="hero-section">
             <div class="hero-section__info">
@@ -299,7 +322,7 @@
             <div class="footer__wrapper">
                 <div class="footer__logo-container">
                     <img src="./images/logo.svg" class="header__logo">
-                    <button class="header__button" type="button">Order a consultation</button>
+                    <button class="header__button" type="button" id="bitton">Order a consultation</button>
                 </div>
                 <nav class="footer__links">
                     <ul class="footer__links-item">
@@ -324,6 +347,7 @@
     <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
     <script src="./script/slide.js"></script>
     <script src="./script/motion.js"></script>
+    <script src="./script/form.js"></script>
 </body>
 
 </html>
