@@ -1,15 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let menu = document.querySelectorAll("#button");
-  const formMenu = document.getElementById("formMenu");
-  menu[0].addEventListener("click", (event) => {
-    formMenu.classList.remove("hidden");
-  });
-
-  const closeMenu = document.querySelector("#closeMenu");
-  closeMenu.addEventListener("click", (event) => {
-    formMenu.classList.add("hidden");
-  });
-
   const form = document.getElementById("contact-form");
   form.addEventListener("submit", formsend);
   const sent = document.getElementById("sent");
