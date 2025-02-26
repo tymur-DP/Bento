@@ -91,3 +91,25 @@ changeFill = () => {
   });
   resColored[img].classList.add("fill");
 };
+
+const time1 = 3000;
+const time2 = 4000;
+const time3 = 5000;
+const step = 1;
+
+digitOut = (num, elem, timeEl) => {
+  const digits = document.querySelector("#" + elem);
+  let n = 1;
+  let time = Math.round(time1 / (num / step));
+  let interval = setInterval(() => {
+    n = n + step;
+    if (n == num) {
+      clearInterval(interval);
+    }
+    digits.innerHTML = n;
+  }, time);
+};
+
+digitOut(10, "digit1", time1);
+digitOut(2, "digit2", time2);
+digitOut(360, "digit3", time3);
